@@ -1,0 +1,131 @@
+\documentclass{resume}
+\usepackage{url}
+\usepackage[pdfborderstyle={/W 0}]{hyperref}
+
+%
+% set the space used for category titles here:
+% use the same value for oddsidemargin and marginparwidth [the latter 
+% 		will be reset to account for marginparsep]
+% 
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}
+
+% 
+% calculate other dimensions [textwidth and evensidemargin] 
+% in function of oddsidemargin and marginparwidth: 
+% would be nicer to put in the class file...
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+
+%
+\setlength{\topmargin}{-1in}
+
+%
+\renewcommand{\titlenamefont}{\bf\Large}
+\renewcommand{\categoryfont}{\sc}
+\renewcommand{\labelcitem}{}
+
+
+\author{Siddhartha Reddy Kothakapu}
+
+
+% - Address --------------------------------------------------------
+\address
+{
+    \url{http://www.grok.in/}\\
+    \url{http://www.linkedin.com/in/sidsr}
+}
+{
+	\href{mailto:sids@grok.in}{sids@grok.in}\\
+    +91 998 028 7437
+}
+
+
+\begin{document}
+\maketitle
+
+\newcommand{\period}{\hfill\small\em}
+
+% - Education ---------------------------------------------------
+\begin{category}{Education}
+
+    \citem{M.Tech in Information Technology} {\footnotesize(3.71 CGPA)} {\period June 2006}\\
+	International Institute of Information Technology, Bangalore
+
+\end{category}
+
+
+% - Experience --------------------------------------------------
+\begin{category}{Experience}
+
+    \citem{Software Engineer,} Ziva Software, Bangalore {\period July 2006 - November 2007}
+    \begin{quote}
+        Meh
+    \end{quote}
+
+    \citem{Senior Software Engineer,} Ziva Software, Bangalore {\period December 2007 - }
+    \begin{quote}
+        Blah
+    \end{quote}
+
+\end{category}
+
+
+% -Publications ------------------------------------------ %
+\begin{category}{Publication}
+
+    \citemnobullet {\bf Measures of ``Ignorance'' on the Web} {\period December 2006}\\
+    International Conference on Management of Data, Delhi, India
+
+\end{category}
+
+
+% - Projects ---------------------------------------------------
+\begin{category}{Selected Projects}
+
+    \citem{Buddhi,} Ziva Software, Bangalore {\period April 2007 - }
+ 	\begin{quote}
+        Bleh
+	\end{quote}
+
+    \citem{Buddhi,} Ziva Software, Bangalore {\period April 2007 - }
+ 	\begin{quote}
+        Duh
+	\end{quote}
+
+\end{category}
+
+
+% - Skills --------------------------------------------------
+\begin{category}{Skills}
+
+    \citem{Languages:} Perl, Java, C/C++, Ruby, Python
+
+    \citem{Softwares/Frameworks:}
+
+\end{category}
+
+
+% - Intersts --------------------------------------------------
+\begin{category}{Interests}
+	\citemnobullet Information Engineering---Retrieval, Extraction \& Management, Scalable Architectures, Distributed \& Cloud Computing, Usability \& User Experience
+\end{category}
+
+
+\renewcommand{\labelcitem}{$\diamond$}
+
+
+% - Honors ---------------------------------------------------
+\begin{category}{Honors}
+    \citembullet Valedictorian for the class for 2006 at IIIT, Bangalore {\period June 2006}
+    \citembullet Was awarded the Honeywell Scholarship for excellence at IIIT, Bangalore {\period June 2006}
+\end{category}
+
+
+\end{document}

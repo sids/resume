@@ -149,7 +149,7 @@
   	\parbox[t]{\addresswidth}{\begin{flushleft}\@addressA\end{flushleft}}\hfill%
   \parbox[t]{\addresswidth}{\begin{flushright}\@addressB\end{flushright}}
   \par
-  \vskip 1.5em}
+  \vskip 0.6em}
   
 \endinput
 

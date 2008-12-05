@@ -1,20 +1,24 @@
-\documentclass{resume} \usepackage{url} \usepackage[pdfborderstyle={/W
-0}]{hyperref}
+\documentclass{resume}
+\usepackage{url}
+\usepackage[pdfborderstyle={/W 0}]{hyperref}
 
 %
 % set the space used for category titles here: use the same value for
 % oddsidemargin and marginparwidth [the latter will be reset to account for
 % marginparsep]
 % 
-\setlength{\oddsidemargin}{1in} \setlength{\marginparwidth}{1in}
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}
 
 % 
 % calculate other dimensions [textwidth and evensidemargin] in function of
 % oddsidemargin and marginparwidth: would be nicer to put in the class file...
 %
 \addtolength{\marginparwidth}{-\marginparsep}
-\setlength{\evensidemargin}{\oddsidemargin} \setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-2in} \addtolength{\textwidth}{-2\oddsidemargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\addtolength{\textwidth}{-2\oddsidemargin}
 \addtolength{\textwidth}{\marginparwidth}
 \addtolength{\textwidth}{\marginparsep}
 
@@ -22,20 +26,27 @@
 \setlength{\topmargin}{-1in}
 
 %
-\renewcommand{\titlenamefont}{\bf\Large} \renewcommand{\categoryfont}{\sc}
+\renewcommand{\titlenamefont}{\bf\Large}
+\renewcommand{\categoryfont}{\sc}
 \renewcommand{\labelcitem}{}
 
 %\newcommand{\period}{\hspace{-0.35em}, \small\sl}
-\newcommand{\period}{\hfill\small\sl} \newcommand{\teamsize}{\sc\footnotesize
-Team Size: }
+\newcommand{\period}{\hfill\small\sl}
+\newcommand{\teamsize}{\sc\footnotesize Team Size: }
 
 
 \author{Siddhartha Reddy Kothakapu}
 
 
 % - Address --------------------------------------------------------
-\address { \url{http://www.grok.in/}\\ \url{http://www.linkedin.com/in/sidsr} }
-{ \href{mailto:sids@grok.in}{sids@grok.in}\\ +91 998 028 7437 }
+\address {
+    \url{http://www.grok.in/}\\
+    \url{http://www.linkedin.com/in/sidsr}
+}
+{
+    \href{mailto:sids@grok.in}{sids@grok.in}\\
+    +91 998 028 7437
+}
 
 
 \begin{document} \maketitle
@@ -53,18 +64,20 @@ Team Size: }
 % - Experience --------------------------------------------------
 \begin{category}{Experience}
 
-    \citem{Senior/ Software Engineer,} Ziva Software, Bangalore {\period Jul
-    2006 - Nov 2007} \begin{quotation} {\em Ziva Software Pvt Ltd} is a Venture
-        Capital funded startup based out of Bangalore, India providing products
-        and services in the {\em Mobile Search} domain. Established in late
-        2005, Ziva has provided search solutions to different players in the
-        mobile industry including operators and content owners. In 2007, Ziva
-        launched {\em Zook}, it's consumer facing mobile search system.
+    \citem{Senior/ Software Engineer,} Ziva Software, Bangalore {\period Jul 2006 - Nov 2007}
+    \begin{quotation}
+        {\em Ziva Software Pvt Ltd} is a Venture Capital funded startup based
+        out of Bangalore, India providing products and services in the {\em
+        Mobile Search} domain. Established in late 2005, Ziva has provided
+        search solutions to different players in the mobile industry including
+        operators and content owners. In 2007, Ziva launched {\em Zook}, it's
+        consumer facing mobile search system.
 
         Was the first non-founding employee to join the company. Have been core
         member of the team, involved in most of the projects and actively
-        participated in defining the development roadmap for them. % ``for
-        them'' or ``for the company''?  \end{quotation}
+        participated in defining the development roadmap for them.
+        % ``for them'' or ``for the company''?
+    \end{quotation}
 
 \end{category}
 
@@ -72,9 +85,10 @@ Team Size: }
 % -Publications ------------------------------------------ %
 \begin{category}{Publication}
 
-    \citemnobullet {\bf Measures of ``Ignorance'' on the Web} {\period Dec
-    2006} \begin{quote} International Conference on Management of Data, Delhi,
-        India \end{quote}
+    \citemnobullet {\bf Measures of ``Ignorance'' on the Web} {\period Dec 2006}
+    \begin{quote}
+        International Conference on Management of Data, Delhi, India
+    \end{quote}
 
 \end{category}
 
@@ -82,78 +96,113 @@ Team Size: }
 % - Projects ---------------------------------------------------
 \begin{category}{Selected Projects}
 
-    \citem{Buddhi Online,} Ziva Software, Bangalore; {\teamsize 1} {\period Nov
-    2007 - Present} \begin{quotation} Prototype of a system to fetch {\em
-        Yahoo! BOSS} Web search results at run time, fetch the web pages in the
-        results and extract {\em snippets} that can possibly provide an answer
-        to the query right away.  \end{quotation}
+    \citem{Buddhi Online,} Ziva Software, Bangalore;
+    {\teamsize 1}
+    {\period Nov 2007 - Present}
+    \begin{quotation}
+        A system to fetch {\em Yahoo! BOSS} Web search results at run time,
+        fetch the result web pages and extract {\em snippets} that can possibly
+        provide an answer to the query right away.
 
-    \citem{Buddhi,} Ziva Software, Bangalore; {\teamsize 2-3} {\period Apr 2007
-    - Present} \begin{quotation} A dream to crawl the Web and automagically
-        extract {\em information content entities} off the crawled pages.
+        Developed a prototype of the system as part of a feasibility analysis.
+    \end{quotation}
 
-        \begin{itemize} \item Designed and implemented \begin{itemize} \item a
-                {\em Focused Crawler} based on the {\em Nutch} open source
-                crawler.  \item a {\em HTML reducer} that transforms complex
-                HTML pages into minimal HTML for easier analysis.  \item a {\em
-                page abstractor} that discerns logical structures (such as
-                tables, lists etc.) from unstructured HTML.  \end{itemize}
+    \citem{Buddhi,} Ziva Software, Bangalore;
+    {\teamsize 2-3}
+    {\period Apr 2007 - Present}
+    \begin{quotation}
+        A dream to crawl the Web and automagically extract {\em information
+        content entities} off the crawled pages.
+
+        \begin{itemize}
+            \item Designed and implemented
+                \begin{itemize}
+                    \item a {\em Focused Crawler} based on the {\em Nutch} open
+                        source crawler.
+                    \item a {\em HTML reducer} that transforms complex HTML
+                        pages into minimal HTML for easier analysis.
+                    \item a {\em page abstractor} that discerns logical
+                        structures (such as tables, lists etc.) from
+                        unstructured HTML.
+                \end{itemize}
             \item Set up the {\em Hadoop} based infrastructure for the crawling
                 and extraction.  This was initially set up on a cluster of {\em
                 Amazon EC2} machines with {\em Amazon S3} as a data store.
-        \end{itemize} \end{quotation}
+        \end{itemize}
+    \end{quotation}
 
-    \citem{Zook,} Ziva Software, Bangalore; {\teamsize 2-3} {\period Jan 2007 -
-    Present} \begin{quotation} Ziva Software's flagship mobile search engine.
-        The main promise is to provide exact answers to questions in the least
-        number of clicks; implying that the search engine provides information
-        right away rather than directing the user to another website that {\em
-        might} have the information.
+    \citem{Zook,} Ziva Software, Bangalore;
+    {\teamsize 2-3}
+    {\period Jan 2007 - Present}
+    \begin{quotation}
+        Ziva Software's flagship mobile search engine.  The main promise is to
+        provide exact answers to questions in the least number of clicks;
+        implying that the search engine provides information right away rather
+        than directing the user to another website that {\em might} have the
+        information.
 
-        \begin{itemize} \item Set up the search system infrastructure.  \item
-                Designed the {\em User Experience} and {\em User Interface} of
-                the WAP and SMS interfaces.  \item Responsible for deploying
-                releases.  \item Created a HTTP based API for accessing the
-                search system.  \end{itemize} \end{quotation}
+        \begin{itemize}
+            \item Set up the search system infrastructure.
+            \item Designed the {\em User Experience} and {\em User Interface}
+                of the WAP and SMS interfaces.
+            \item Responsible for deploying releases.
+            \item Created a HTTP based API for accessing the search system.
+        \end{itemize}
+    \end{quotation}
 
-    \citem{Zivabot,} Ziva Software, Bangalore {\teamsize 1} {\period Aug 2006 -
-    Oct 2006} \begin{quotation} A scalable, highly-configurable, generic
-        scraping system for crawling specific websites containing useful
-        information and extracting that information.
+    \citem{Zivabot,} Ziva Software, Bangalore;
+    {\teamsize 1}
+    {\period Aug 2006 - Oct 2006}
+    \begin{quotation}
+        A scalable, highly-configurable, generic scraping system for crawling
+        specific websites containing useful information and extracting that
+        information.
 
         Was fully responsible for the design and implementation of the system.
         Configured the system and set it up to work with an initial set of
         websites which provided base content for the Zook mobile search engine.
     \end{quotation}
 
-    \citem{Better Web Buys;} {\teamsize 2} {\period Feb 2006 - May 2006}
-    \begin{quotation} A {\em faceted price comparison shopping search engine}
-        with over 20 million items across more than 100 merchants.
+    \citem{Better Web Buys;}
+    {\teamsize 2}
+    {\period Feb 2006 - May 2006}
+    \begin{quotation}
+        A {\em faceted price comparison shopping search engine} with over 20
+        million items across more than 100 merchants.
 
         Was completely responsible for the whole project right from downloading
         feeds, parsing them, storing them in a database, indexing, searching,
         user experience and setting up the entire system on a cluster of
-        machines. Used {\em Sphynx} as the backend search system.
+        machines. Used {\em Sphinx} as the backend search system.
     \end{quotation}
 
-    \citem{yadb -- Yet Another DataBase,} IIIT, Bangalore; {\teamsize 3}
-    {\period Aug 2005 - Dec 2005} \begin{quotation} A reasonably {\em complete
-        RDBMS} with a buffered memory manager, B+ tree indexing and a complete
-        database management module including support for basic SQL, table
-        management, paged storage etc. Part of the {\em Advanced Databases}
-        course.  \end{quotation}
+    \citem{yadb -- Yet Another DataBase,} IIIT, Bangalore;
+    {\teamsize 3}
+    {\period Aug 2005 - Dec 2005}
+    \begin{quotation}
+        A reasonably {\em complete RDBMS} with a buffered memory manager, B+
+        tree indexing and a complete database management module including
+        support for basic SQL, table management, paged storage etc. Part of the
+        {\em Advanced Databases} course.
+    \end{quotation}
 
-    \citem{Top News,} IIIT, Bangalore; {\teamsize 1} {\period Sep 2005 - Oct
-    2005} \begin{quotation} A system to bring out the top news of the hour by
-        clustering the news items obtained from the feeds provided by several
-        news sources. Any news being discussed by multiple sources within a
-        given (variable) timeframe is marked as top news. A bi-partite graph
-        based clustering algorithm was used for clustering based on just the
-        title and summary of the news item. {\em Part of the Web Information
-        Retreival} course.  \end{quotation}
+    \citem{Top News,} IIIT, Bangalore;
+    {\teamsize 1}
+    {\period Sep 2005 - Oct 2005}
+    \begin{quotation}
+        A system to bring out the top news of the hour by clustering the news
+        items obtained from the feeds provided by several news sources. Any
+        news being discussed by multiple sources within a given (variable)
+        timeframe is marked as top news. A bi-partite graph based clustering
+        algorithm was used for clustering based on just the title and summary
+        of the news item. Part of the {\em Web Information Retreival} course.
+    \end{quotation}
 
-    \citem{SOS -- S Operating System;} {\teamsize 2} {\period Sep 2002 - Oct
-    2003} \begin{quotation} \end{quotation}
+    \citem{SOS -- S Operating System;}
+    {\teamsize 2}
+    {\period Sep 2002 - Oct 2003}
+    \begin{quotation}
+    \end{quotation}
 
 \end{category}
 
@@ -163,25 +212,35 @@ Team Size: }
 
     \citem{Languages:} Perl, Java, C/C++, Ruby, Python
 
-    \citem{Softwares/Frameworks:} Hadoop, Nutch, Lucene, Solr, Sphynx, WEKA,
+    \citem{Softwares/Frameworks:} Hadoop, Nutch, Lucene, Solr, Sphinx, WEKA,
     Ruby on Rails, Prototype, Hibernate
 
 \end{category}
 
 
 % - Intersts --------------------------------------------------
-\begin{category}{Interests} \citemnobullet Information Engineering---Retrieval,
-    Extraction \& Management, Scalable Architectures, Distributed \& Cloud
-    Computing, Usability \& User Experience \end{category}
+\begin{category}{Interests}
+
+    \citemnobullet Information Engineering---Retrieval, Extraction \&
+    Management, Scalable Architectures, Distributed \& Cloud Computing,
+    Usability \& User Experience
+
+\end{category}
 
 
 \renewcommand{\labelcitem}{$\diamond$}
 
 
 % - Honors ---------------------------------------------------
-\begin{category}{Honors} \citembullet Valedictorian for the class for 2006 at
-    IIIT, Bangalore. {\period Jun 2006} \citembullet Was awarded the Honeywell
-    Scholarship for excellence at IIIT, Bangalore. {\period Jun 2006}
+\begin{category}{Honors}
+
+    \citembullet {\em Valedictorian} for the class for 2006 at IIIT, Bangalore.
+    {\period Jun 2006}
+
+    \citembullet Was awarded the {\em Honeywell Scholarship} for excellence at IIIT,
+    Bangalore.
+    {\period Jun 2006}
+
 \end{category}
 
 

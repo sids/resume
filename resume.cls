@@ -1,6 +1,7 @@
-% resume class v1.1
-% 02/07/1997
-% written by Miklos Csuros csuros@cs.yale.edu
+% resume class v0.1
+% 2008/12/06
+% written by Siddhartha Reddy (sids [at] grok [dot] in)
+% based on resume.cls by Miklos Csuros csuros@cs.yale.edu
 %
 % features
 % 
@@ -8,9 +9,6 @@
 %
 % 2	category environment for resume sections
 %       
-%       \citem[1]  	for items of the section with argument emphasized
-%       \citemnobullet 	for items of the section without a bullet
-%       \citembullet    for items of the section with bullet & no emphasis
 % 
 
 \NeedsTeXFormat{LaTeX2e}
@@ -67,10 +65,13 @@
 	No author given.}{%
 	Use \protect\author\space to specify it.}}
 
+\newcommand{\topic}{\bf}
+\newcommand{\hl}{\em}
+
 
 %%%%%% category environment
 \newif{\if@firstitem}
-\newenvironment{category}[1]{%
+\newenvironment{category}[2]{%
     \@firstitemtrue
     \def\makecategorytitle{%
         \if@firstitem
@@ -78,59 +79,18 @@
         \fi
         \@firstitemfalse
     }
-   \par
-   \begin{list}{}{%
-      \setlength{\leftmargin}{0in}	% no extra left margin before bullets
-      \setlength{\parsep}{0in}
-      \setlength{\parskip}{0.6em}
-      \let\olditem\item
-      \renewcommand{\item}{\olditem \leavevmode\makecategorytitle}
-      }
+    \par
+    \begin{list}{#2}{%
+        \setlength{\leftmargin}{0in}	% no extra left margin before bullets
+        \setlength{\parsep}{0in}
+        \setlength{\parskip}{0.6em}
+        \setlength{\itemsep}{1em}
+        \let\olditem\item
+        \renewcommand{\item}{\olditem \leavevmode\makecategorytitle}
+    }
 }
 {\end{list}}
 
-%%%%%% category environment
-%\newif{\if@firstitem}
-%\newenvironment{category}[1]%
-%   {\@firstitemtrue
-%   \def\makecategorytitle{%
-%   	\marginpar{\categoryfont\raggedright #1}}
-%   \par
-%   \begin{list}{}{%
-%      \setlength{\leftmargin}{0in}	% no extra left margin before bullets
-%      \setlength{\parsep}{0in}
-%      \setlength{\parskip}{0.6em}
-%      }}
-%   {\end{list}}
-
-
-%%%%%%% \citem
-\newcommand*{\citem}[1]{%
-   \if@firstitem
-      {\item[\labelcitem]{\bf #1}\makecategorytitle}%
-   \else
-      \itemsep=1.2em
-      {\item[\labelcitem]{\bf #1}}%
-   \fi
-   \@firstitemfalse}
-
-%%%%%%% \citemnobullet
-\newcommand{\citemnobullet}{%
-	\if@firstitem
-		\item[] \leavevmode\makecategorytitle
-	\else
-		\item[]
-	\fi
-	\@firstitemfalse}
-
-%%%%%%% \citembullet
-\newcommand{\citembullet}{%
-	\if@firstitem
-		\item[\labelcitem] \leavevmode\makecategorytitle
-	\else
-		\item[\labelcitem]
-	\fi
-	\@firstitemfalse}
 
 %%%%%%% \maketitle
 \renewcommand{\maketitle}{%

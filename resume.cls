@@ -67,19 +67,41 @@
 	No author given.}{%
 	Use \protect\author\space to specify it.}}
 
+
 %%%%%% category environment
 \newif{\if@firstitem}
-\newenvironment{category}[1]%
-   {\@firstitemtrue
-   \def\makecategorytitle{%
-   	\marginpar{\categoryfont\raggedright #1}}
+\newenvironment{category}[1]{%
+    \@firstitemtrue
+    \def\makecategorytitle{%
+        \if@firstitem
+            \marginpar{\categoryfont\raggedright #1}%
+        \fi
+        \@firstitemfalse
+    }
    \par
    \begin{list}{}{%
       \setlength{\leftmargin}{0in}	% no extra left margin before bullets
       \setlength{\parsep}{0in}
       \setlength{\parskip}{0.6em}
-      }}
-   {\end{list}}
+      \let\olditem\item
+      \renewcommand{\item}{\olditem \leavevmode\makecategorytitle}
+      }
+}
+{\end{list}}
+
+%%%%%% category environment
+%\newif{\if@firstitem}
+%\newenvironment{category}[1]%
+%   {\@firstitemtrue
+%   \def\makecategorytitle{%
+%   	\marginpar{\categoryfont\raggedright #1}}
+%   \par
+%   \begin{list}{}{%
+%      \setlength{\leftmargin}{0in}	% no extra left margin before bullets
+%      \setlength{\parsep}{0in}
+%      \setlength{\parskip}{0.6em}
+%      }}
+%   {\end{list}}
 
 
 %%%%%%% \citem

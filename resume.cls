@@ -29,12 +29,10 @@
 %  commands.
 % -------------------------------------------------------
 
-\newcommand{\titlenamefont}{\bf\LARGE}	% the font used to print the name
+\newcommand{\titlenamefont}{\bf\Large}	% the font used to print the name
 					% on the top of the 1st page
-\newcommand{\categoryfont}{\sl}		% font used to print the category
+\newcommand{\categoryfont}{\sc}		% font used to print the category
 					% names
-\newcommand{\labelcitem}{\labelitemi}	% the bullet produced by \citem or
-					% \citembullet
 \reversemarginpar			% so that category names are on the
 					% left for one-sided document and
 					% left-right-left-... for two-sided
@@ -43,13 +41,42 @@
 % - changing lengths
 % -------------------------------------------------------
 
-\setlength{\topmargin}{0in}
-\setlength{\textheight}{9.0in}
-\setlength{\oddsidemargin}{1.5in}		% left margin on first page
-\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\topmargin}{-1in}
+\setlength{\textheight}{60\baselineskip}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+
+%%%%%% \setCategoryMargin
+\newif{\if@categorymarginset}
+\newcommand{\setCategoryMargin}[1][1in]{%
+    \if@categorymarginset
+        \addtolength{\textwidth}{-\marginparwidth}
+        \addtolength{\textwidth}{-\marginparsep}
+    \fi
+    \setlength{\marginparwidth}{#1}
+    \addtolength{\marginparwidth}{-\marginparsep}
+    \addtolength{\textwidth}{\marginparwidth}
+    \addtolength{\textwidth}{\marginparsep}
+    \@categorymarginsettrue
+}
+\setCategoryMargin
+
+%%%%%% \setSideMargins
+\newif{\if@sidemarginsset}
+\newcommand{\setSideMargins}[1][1in]{%
+    \if@sidemarginsset
+        \addtolength{\textwidth}{2\oddsidemargin}
+    \fi
+    \setlength{\oddsidemargin}{#1}
+    \setlength{\evensidemargin}{\oddsidemargin}
+    \addtolength{\textwidth}{-2\oddsidemargin}
+    \@sidemarginssettrue
+}
+\setSideMargins
 
 \newlength{\titlewidth}
 \newlength{\addresswidth}
+
 % -------------------------------------------------------
 % - new commands
 % -------------------------------------------------------
@@ -65,8 +92,10 @@
 	No author given.}{%
 	Use \protect\author\space to specify it.}}
 
+
 \newcommand{\topic}{\bf}
 \newcommand{\hl}{\em}
+\newcommand{\period}{\hfill\small\sl}
 
 
 %%%%%% category environment

@@ -3,37 +3,7 @@
 \usepackage[pdfborderstyle={/W 0}]{hyperref}
 
 %
-% set the space used for category titles here: use the same value for
-% oddsidemargin and marginparwidth [the latter will be reset to account for
-% marginparsep]
-% 
-\setlength{\oddsidemargin}{1in}
-\setlength{\marginparwidth}{1in}
-
-% 
-% calculate other dimensions [textwidth and evensidemargin] in function of
-% oddsidemargin and marginparwidth: would be nicer to put in the class file...
-%
-\addtolength{\marginparwidth}{-\marginparsep}
-\setlength{\evensidemargin}{\oddsidemargin}
-\setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-2in}
-\addtolength{\textwidth}{-2\oddsidemargin}
-\addtolength{\textwidth}{\marginparwidth}
-\addtolength{\textwidth}{\marginparsep}
-
-%
-\setlength{\topmargin}{-1.2in}
-\setlength{\textheight}{60\baselineskip}
-
-%
-\renewcommand{\titlenamefont}{\bf\Large}
-\renewcommand{\categoryfont}{\sc}
-\renewcommand{\labelcitem}{}
 \renewcommand{\labelitemi}{$\diamond$}
-
-%\newcommand{\period}{\hspace{-0.35em}, \small\sl}
-\newcommand{\period}{\hfill\small\sl}
 \newcommand{\teamsize}{\sc\footnotesize Team Size: }
 
 
@@ -122,7 +92,6 @@
         \begin{quotation}
             A dream to crawl the Web and automagically extract {\hl information
             content entities} off the crawled pages.
-        \end{quotation}
 
             \begin{itemize}
                 \item Designed and implemented
@@ -139,6 +108,7 @@
                     and extraction.  This was initially set up on a cluster of {\hl
                     Amazon EC2} machines with {\hl Amazon S3} as a data store.
             \end{itemize}
+        \end{quotation}
 
     \item {\topic Zook,} Ziva Software, Bangalore;
         {\teamsize 2-3}
@@ -149,7 +119,6 @@
             implying that the search engine provides information right away rather
             than directing the user to another website that {\hl might} have the
             information.
-        \end{quotation}
 
             \begin{itemize}
                 \item Set up the search system infrastructure.
@@ -158,6 +127,7 @@
                 \item Responsible for deploying releases.
                 \item Created a HTTP based API for accessing the search system.
             \end{itemize}
+        \end{quotation}
 
     \pagebreak
 

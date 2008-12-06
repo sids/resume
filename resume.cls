@@ -77,6 +77,7 @@
    \begin{list}{}{%
       \setlength{\leftmargin}{0in}	% no extra left margin before bullets
       \setlength{\parsep}{0in}
+      \setlength{\parskip}{0.6em}
       }}
    {\end{list}}
 
@@ -86,6 +87,7 @@
    \if@firstitem
       {\item[\labelcitem]{\bf #1}\makecategorytitle}%
    \else
+      \itemsep=1.2em
       {\item[\labelcitem]{\bf #1}}%
    \fi
    \@firstitemfalse}

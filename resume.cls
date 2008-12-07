@@ -104,7 +104,7 @@
     \@firstitemtrue
     \def\makecategorytitle{%
         \if@firstitem
-            \marginpar{\categoryfont\raggedright #1}%
+            \leavevmode\marginpar{\categoryfont\raggedright #1}%
         \fi
         \@firstitemfalse
     }
@@ -115,7 +115,7 @@
         \setlength{\parskip}{0.6em}
         \setlength{\itemsep}{1em}
         \let\olditem\item
-        \renewcommand{\item}{\olditem \leavevmode\makecategorytitle}
+        \renewcommand{\item}{\olditem\makecategorytitle}
     }
 }
 {\end{list}}

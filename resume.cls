@@ -112,8 +112,8 @@
     \begin{list}{#2}{%
         \setlength{\leftmargin}{0in}	% no extra left margin before bullets
         \setlength{\parsep}{0in}
-        \setlength{\parskip}{0.6em}
-        \setlength{\itemsep}{1em}
+        \setlength{\parskip}{0.3em}
+        \setlength{\itemsep}{0.6em}
         \let\olditem\item
         \renewcommand{\item}{\olditem\makecategorytitle}
     }
